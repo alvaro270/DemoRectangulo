@@ -35,7 +35,7 @@ namespace DemoRectangulo
         int Distanc(Punto punt1, Punto punt2)
         {
             int dis;
-            dis = 2*(punt1.x - punt2.x) + 2*(punt1.y - punt2.y);
+            dis = (punt1.x - punt2.x)*(punt1.x - punt2.x) + (punt1.y - punt2.y)*(punt1.y - punt2.y);
             return dis;
         }
         public double Perimetro(Punto Punto1, Punto Punto2, Punto Punto3, Punto Punto4)
@@ -45,7 +45,7 @@ namespace DemoRectangulo
             d2 = Distanc(Punto2, Punto3);
             d3 = Distanc(Punto3, Punto4);
             d4 = Distanc(Punto4, Punto1);
-            Perimetro = d1+d2+d3+d4;
+            Perimetro = d1 + d2 + d3 + d4;
             return Perimetro;
         }
     }
